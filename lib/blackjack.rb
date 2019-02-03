@@ -1,21 +1,29 @@
 def welcome
   # code #welcome here
+  puts "Welcome to the Blackjack Table"
 end
 
-def deal_card
+def deal_card (card)
   # code #deal_card here
+  card > 0
+   card.rand(1..11) 
+ 
 end
 
-def display_card_total
+def display_card_total (card_total)
   # code #display_card_total here
+  puts "Your cards add up to #{card_total}"
 end
 
 def prompt_user
   # code #prompt_user here
+  gets.chomp 
+  
 end
 
 def get_user_input
   # code #get_user_input here
+  expect(self).to receive(:get_user_input).and_return("s")
 end
 
 def end_game
