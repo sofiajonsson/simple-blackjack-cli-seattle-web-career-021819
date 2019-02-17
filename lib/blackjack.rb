@@ -60,4 +60,16 @@ end
 def runner
   # code runner here
 end
+def runner
+  welcome #introduces the game
+  sleep 0.75
+  card_total = initial_round #est. current total + lets user know what number they have at the moment
+  until card_total > 21 #continue game until user loses
+    card_total = hit?(card_total)
+    display_card_total(card_total)
+  end
+  end_game(card_total) #prints out when user has lost
+end
+
+runner 
     
